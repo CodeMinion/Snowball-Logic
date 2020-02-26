@@ -23,14 +23,19 @@ class SnowballMain:
 		DISPLAYSURF = pygame.display.set_mode((800, 480), pygame.FULLSCREEN)
 
 		# TODO: Connect To Thrusters BT Device 
-		# TODO: Sping Client Listening thread so we can connect from the mobile app. 
-
+		
 		# TODO: Create Snowball Instance
 		mSnowball = Snowball()
 		mSnowball.init()
 
+		# TODO: Spin Client Listening thread so we can connect from the mobile app. 
+
 		mRunning = True 
 		while mRunning:
+			
+			# Clear screen by drawing black on it.
+			DISPLAYSURF.fill((0,0,0))
+			
 			for event in pygame.event.get():
 				if event.type == QUIT:
 					mRunning = False
@@ -40,8 +45,14 @@ class SnowballMain:
 						mRunning = False 
 						break
 			
-			# TODO Update Snowball
-						
+			timeMillis = pygame.time.get_ticks()
+			
+			# Update Snowball
+			mSnowball.update(timeMillis)
+			
+			# Draw Snowball
+			mSnowball.draw(DISPLAYSURF)
+					
 			pygame.display.update()
 			mFpsClock.tick(FPS)
 			

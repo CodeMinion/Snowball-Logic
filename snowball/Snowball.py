@@ -4,14 +4,14 @@ from SbStateInitial import SbStateInitial
 
 class Snowball(FsmOwner):
 	
-	mSnowballFsm = None
-	
 	def __init__(self):
-		mSnowballFsm = Fsm(self, SbStateInitial())
-		FsmOwner.__init__(self, mSnowballFsm)
+		snowballFsm = Fsm(self, SbStateInitial())
+		FsmOwner.__init__(self, snowballFsm)
 
 	def init(self):
 		# Do any resource loading needed for Snowball
 		pass
+		
+
 		
 		
