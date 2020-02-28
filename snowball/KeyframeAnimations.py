@@ -23,21 +23,25 @@ class Keyframe:
 ########################################################
 class AnimationStrip:
 	
+	mId = None
 	mCurrentFame = -1
 	mNextFrameUpdateTimeMillis = 0
 	mIsLooping = False
 	mKeyframesList = None
 	mFrameLength = 0
+	mSpriteSheet = None
 	
 	'''
 	@param keyframeList: List of keyframes
 	@param frameLength: Lenght in milliseconds of a single frame.
 	@param loops: True if the animation will restart when it reaches the end.
 	'''
-	def __init__(self, keyframeList, frameLength, loops = False):
+	def __init__(self, animId, spriteSheet, keyframeList, frameLength, loops = False):
+		self.mId = animId
 		self.mKeyframesList = keyframeList
 		self.mFrameLength = frameLength
 		self.mIsLooping = loops
+		self.mSpriteSheet = spriteSheet
 		pass
 
 	'''
@@ -71,4 +75,14 @@ class AnimationStrip:
 			 
 		return self.mKeyframesList[self.mCurrentFame]		
 		
+	'''
+	Returns the spriteSheet for this animation resource for this animation.
+	'''
+	def getSpriteSheet(self):
+		return self.mSpriteSheet
 		
+	'''
+	Identifier of this animation
+	'''
+	def getId(self):
+		return self.mId

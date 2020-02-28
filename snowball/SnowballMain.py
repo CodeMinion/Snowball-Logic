@@ -25,7 +25,7 @@ class SnowballMain:
 		# TODO: Connect To Thrusters BT Device 
 		
 		# TODO: Create Snowball Instance
-		mSnowball = Snowball()
+		mSnowball = Snowball(pygame)
 		mSnowball.init()
 
 		# TODO: Spin Client Listening thread so we can connect from the mobile app. 

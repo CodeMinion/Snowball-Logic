@@ -1,0 +1,20 @@
+{
+	"id": "HIGH-FIVE",
+	"frameLength": 700,
+	"isLooping": false,
+	"spriteSheetSrc" : "./assets/spritesheets/sprite_high_five.png",
+	"keyframes": [
+		{
+			"sourceX": 0,
+			"sourceY": 0,
+			"sourceWidth": 800,
+			"sourceHeight": 480
+		},
+		{
+			"sourceX": 0,
+			"sourceY": 480,
+			"sourceWidth": 800,
+			"sourceHeight": 480
+		}
+	]
+}

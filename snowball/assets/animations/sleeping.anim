@@ -1,0 +1,31 @@
+{
+	"id": "SLEEPING",
+	"frameLength": 500,
+	"isLooping": true,
+	"spriteSheetSrc" : "./assets/spritesheets/sprite_sleeping.png",
+	"keyframes": [{
+			"sourceX": 0,
+			"sourceY": 0,
+			"sourceWidth": 0,
+			"sourceHeight": 0
+		},
+		{
+			"sourceX": 60,
+			"sourceY": 40,
+			"sourceWidth": 220,
+			"sourceHeight": 380
+		},
+		{
+			"sourceX": 60,
+			"sourceY": 40,
+			"sourceWidth": 380,
+			"sourceHeight": 380
+		},
+		{
+			"sourceX": 60,
+			"sourceY": 40,
+			"sourceWidth": 640,
+			"sourceHeight": 380
+		}
+	]
+}

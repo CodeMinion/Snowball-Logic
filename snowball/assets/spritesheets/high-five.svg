@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="800"
+   height="480"
+   viewBox="0 0 211.66666 127"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="high-five.svg"
+   inkscape:export-filename="C:\Users\CodeMinion\Documents\3DPrinting\Costumes\Overwatch\Mei\Snowball\Code\snowball\assets\spritesheets\sprite_sleeping.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="465.99933"
+     inkscape:cy="147.03625"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     showguides="false"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       position="119.81845,0"
+       orientation="0,1"
+       id="guide889"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-169.99998)">
+    <image
+       sodipodi:absref="C:\Users\CodeMinion\Documents\3DPrinting\Costumes\Overwatch\Mei\Snowball\References\Snowball-High-Five-2.PNG"
+       y="182.47321"
+       x="218.54582"
+       id="image886"
+       xlink:href="file:///C:/Users/CodeMinion/Documents/3DPrinting/Costumes/Overwatch/Mei/Snowball/References/Snowball-High-Five-2.PNG"
+       preserveAspectRatio="none"
+       height="100.54166"
+       width="197.90834" />
+    <path
+       style="opacity:1;fill:#88d7f6;fill-opacity:1;stroke:#88d7f6;stroke-width:2.90645671;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 420.28906,53.824219 c -12.66285,0 -22.85742,10.194567 -22.85742,22.857422 V 222.25781 c -5.88512,-0.35608 -11.88071,-0.49953 -18,-0.40234 V 96.681641 c 0,-11.871429 -9.55826,-21.427735 -21.42969,-21.427735 -11.87143,0 -21.42773,9.556306 -21.42773,21.427735 V 226.45703 c -0.33748,0.0667 -0.67151,0.12706 -1.00977,0.19531 l -2.99023,77.17188 c -5.93581,-13.07356 -11.04119,-21.00529 -15.55078,-25.27539 l -18.03711,-34.93164 c -6.89914,-13.36105 -23.20927,-18.56321 -36.57031,-11.66407 -13.36105,6.89915 -18.56321,23.20927 -11.66407,36.57032 l 21.62891,41.88867 c 1.08021,2.09196 2.39252,3.98335 3.88672,5.66016 26.80717,119.00729 161.58335,162.43837 242.18207,102.63277 35.85553,-26.60541 41.90795,-85.92369 34.50152,-154.4609 -0.22113,-0.0636 -0.44107,-0.13136 -0.66211,-0.19531 V 130.25391 c 0,-9.89286 -7.96456,-17.85743 -17.85742,-17.85743 -9.89286,0 -17.85742,7.96457 -17.85742,17.85743 V 252.4043 c -5.03423,-1.7602 -10.08123,-3.53633 -15.14258,-5.3125 V 93.111328 c 0,-11.475712 -9.23913,-20.714844 -20.71484,-20.714844 -11.47572,0 -20.71485,9.239132 -20.71485,20.714844 V 233.58789 c -5.54652,-1.58317 -11.16365,-3.05268 -16.85547,-4.39258 V 76.681641 c 0,-12.662855 -10.19456,-22.857422 -22.85742,-22.857422 z"
+       transform="matrix(0.26458333,0,0,0.26458333,0,169.99998)"
+       id="rect897"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ssccssscccccscccsccsssccsssccss" />
+    <rect
+       style="opacity:1;fill:#88d7f6;fill-opacity:1;stroke:none;stroke-width:0.54511178;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect926"
+       width="16.485514"
+       height="4.7247043"
+       x="172.09348"
+       y="89.614365"
+       ry="2.3623521"
+       rx="0"
+       transform="rotate(43.548606)" />
+    <rect
+       rx="0"
+       ry="2.0788684"
+       y="227.03017"
+       x="27.388113"
+       height="4.9136891"
+       width="27.511673"
+       id="rect932"
+       style="opacity:1;fill:#88d7f6;fill-opacity:1;stroke:none;stroke-width:0.57190609;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       rx="0"
+       y="225.94038"
+       x="158.0343"
+       height="4.9136891"
+       width="27.511671"
+       id="rect932-3"
+       style="opacity:1;fill:#88d7f6;fill-opacity:1;stroke:none;stroke-width:0.57190609;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <rect
+       rx="0"
+       ry="2.3623521"
+       y="248.26537"
+       x="-0.067687429"
+       height="4.7247043"
+       width="16.485514"
+       id="rect951"
+       style="opacity:1;fill:#88d7f6;fill-opacity:1;stroke:none;stroke-width:0.54511178;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       transform="rotate(-38.550836)" />
+    <rect
+       rx="0"
+       ry="2.3623521"
+       y="120.4926"
+       x="287.89832"
+       height="4.7247043"
+       width="16.485514"
+       id="rect951-5"
+       style="opacity:1;fill:#88d7f6;fill-opacity:1;stroke:none;stroke-width:0.54511178;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       transform="rotate(36.281474)" />
+    <rect
+       rx="0"
+       ry="2.3623521"
+       y="249.3597"
+       x="-137.61375"
+       height="4.7247043"
+       width="16.485514"
+       id="rect951-4"
+       style="opacity:1;fill:#88d7f6;fill-opacity:1;stroke:none;stroke-width:0.54511178;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       transform="rotate(-39.719438)" />
+  </g>
+</svg>
