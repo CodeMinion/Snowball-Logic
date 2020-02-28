@@ -5,6 +5,9 @@ from pygame.locals import *
 
 from Snowball import Snowball
 
+from SbEventSleep import SbEventSleep
+from SbEventHighFive import SbEventHighFive
+
 class SnowballMain:
 
 	def __init__(self):
@@ -24,10 +27,12 @@ class SnowballMain:
 
 		# TODO: Connect To Thrusters BT Device 
 		
-		# TODO: Create Snowball Instance
+		# Create Snowball Instance
 		mSnowball = Snowball(pygame)
 		mSnowball.init()
 
+		# Test sleeping state.
+		mSnowball.handleEvent(SbEventHighFive())
 		# TODO: Spin Client Listening thread so we can connect from the mobile app. 
 
 		mRunning = True 

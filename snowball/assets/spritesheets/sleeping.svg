@@ -14,11 +14,8 @@
    viewBox="0 0 211.66666 127"
    version="1.1"
    id="svg8"
-   sodipodi:docname="sleeping.svg"
-   inkscape:export-filename="C:\Users\CodeMinion\Documents\3DPrinting\Costumes\Overwatch\Mei\Snowball\Code\snowball\assets\spritesheets\sprite_sleeping.png"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="sleeping.svg">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -58,7 +55,7 @@
      id="layer1"
      transform="translate(0,-169.99998)">
     <path
-       style="fill:#88d7f6;fill-opacity:1;fill-rule:evenodd;stroke:#88d7f6;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#b8f7d7;fill-opacity:1;fill-rule:evenodd;stroke:#b8f7d7;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 180.52146,275.07736 -39.30953,0.37798 31.75,-75.59524 h -29.86012 l -0.37797,-7.9375 42.7303,0.53454 -31.59344,75.43867 h 26.77146 z"
        id="path815"
        inkscape:connector-curvature="0"
@@ -68,9 +65,9 @@
        inkscape:connector-curvature="0"
        id="path821"
        d="m 122.31309,275.07736 -39.309518,0.37798 31.749988,-54.42857 H 84.893449 l -0.37797,-7.9375 42.730291,0.53454 -31.593437,54.272 h 26.771457 z"
-       style="fill:#88d7f6;fill-opacity:1;fill-rule:evenodd;stroke:#88d7f6;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+       style="fill:#b8f7d7;fill-opacity:1;fill-rule:evenodd;stroke:#b8f7d7;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <path
-       style="fill:#88d7f6;fill-opacity:1;fill-rule:evenodd;stroke:#88d7f6;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#b8f7d7;fill-opacity:1;fill-rule:evenodd;stroke:#b8f7d7;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 64.104741,275.07736 -39.309506,0.37798 31.749982,-42.7869 H 26.685112 l -0.37797,-7.9375 42.730276,0.53454 -31.593422,42.63033 h 26.771445 z"
        id="path823"
        inkscape:connector-curvature="0"

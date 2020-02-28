@@ -8,7 +8,7 @@ class FsmOwner:
 	'''
 	Get a reference to the Finite State Machine of this owner.
 	'''
-	def getFsm():
+	def getFsm(self):
 		return self.mFsm
 	
 	'''

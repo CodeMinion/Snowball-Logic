@@ -17,7 +17,7 @@ class Keyframe:
 	a tuple (x,y,width,height)
 	'''
 	def getSource(self):
-		return (self.mSourceX, self.mSourceY, self.mSourceWidth, self.mSourceWidth, self.mSourceHeight)
+		return (self.mSourceX, self.mSourceY, self.mSourceWidth, self.mSourceHeight)
 
 
 ########################################################
@@ -54,10 +54,11 @@ class AnimationStrip:
 			# Update keyframe forward
 			self.mCurrentFame = self.mCurrentFame + 1
 			
-			if self.mCurrentFame >= len(self.mKeyframesList) and self.mIsLooping:
-				self.mCurrentFame = 0
-			else: 
-				self.mCurrentFame = len(self.mKeyframesList)
+			if self.mCurrentFame >= len(self.mKeyframesList):
+				if self.mIsLooping:
+					self.mCurrentFame = 0
+				else: 
+					self.mCurrentFame = len(self.mKeyframesList) -1
 			
 			# Prepare next update
 			self.mNextFrameUpdateTimeMillis = timeMillis + self.mFrameLength

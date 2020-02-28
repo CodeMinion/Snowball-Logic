@@ -17,7 +17,7 @@ class Fsm:
 	'''
 	def changeState(self, nextState):
 		if self.mCurrState is not None:
-			self.mCurrState.onExit(mFsmOwner)
+			self.mCurrState.onExit(self.mFsmOwner)
 			
 		# Track previous state in case we want to support revert.	
 		self.mPrevState = self.mCurrState

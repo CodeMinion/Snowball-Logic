@@ -3,8 +3,9 @@ from Fsm import Fsm
 from SbStateInitial import SbStateInitial
 
 from KeyframeAnimations import *
+import os
 from os import listdir
-from os.path import isfile,
+from os.path import isfile
 
 import json
 
@@ -20,14 +21,22 @@ class Snowball(FsmOwner):
 		
 	def init(self):
 		# Do any resource loading needed for Snowball
-		for animFile in os.listdir("/assets/animations"):
+		animDir = "./assets/animations"
+		for animFile in os.listdir(animDir):
 			if animFile.endswith(".anim"):
-				loadedAnimation = readJsonAnimFile(animFile)
+				loadedAnimation = self.readJsonAnimFile(os.path.join(animDir,animFile))
 				# Store animation in animation dictionary.
-				mAnimationDict[loadedAnimation.getId()] = loadedAnimation
+				self.mAnimationDict[loadedAnimation.getId()] = loadedAnimation
 		pass
 		
 
+	'''
+	Returns the animation matching the provided ID.
+	'''
+	def getAnimation(self, animId):
+		return self.mAnimationDict[animId]
+
+		
 	def readJsonAnimFile(self, animFilePath):
 		jsonFile = open(animFilePath)
 		jsonAnimData = json.load(jsonFile)
