@@ -4,9 +4,9 @@ from FsmOwner import FsmOwner
 from KeyframeAnimations import *
 from pygame.locals import * 
 
-class SbStateSleeping(FsmState):
+class SbStateCharging(FsmState):
 	
-	mSleepingAnimation = None
+	mAnimation = None
 	def __init__(self):
 		FsmState.__init__(self)
 
@@ -14,8 +14,8 @@ class SbStateSleeping(FsmState):
 	Perform any init steps required for this state.
 	'''	
 	def onEnter(self, fsmOwner):
-		self.mSleepingAnimation = fsmOwner.getAnimation("SLEEPING")
-		self.mSleepingAnimation.start()
+		self.mAnimation = fsmOwner.getAnimation("CHARGING")
+		self.mAnimation.start()
 		
 		pass
 		
@@ -23,20 +23,20 @@ class SbStateSleeping(FsmState):
 	Perform any logic needed on the update state.
 	'''
 	def onUpdate(self, fsmOwner, timeMilis):
-		self.mSleepingAnimation.update(timeMilis)
+		self.mAnimation.update(timeMilis)
+		
+		# TODO If charge animation is complete got to waking.
 		pass
 		
 	'''
 	Perform any drawing here.
 	'''	
 	def onDraw(self, fsmOwner, drawSurface):
-		currKeyframe = self.mSleepingAnimation.getCurrentFrame()
+		currKeyframe = self.mAnimation.getCurrentFrame()
 		keyframeSource = currKeyframe.getSource()
 		sourceRect = Rect((keyframeSource[0], keyframeSource[1]), (keyframeSource[2],keyframeSource[3]))
-		# In the case of the sleeping animation the source and 
-		# destination are the same size so we can use the same coordinates 
-		dest = (keyframeSource[0], keyframeSource[1])
-		drawSurface.blit(self.mSleepingAnimation.getSpriteSheet(), dest, sourceRect)
+		dest = (0,0)
+		drawSurface.blit(self.mAnimation.getSpriteSheet(), dest, sourceRect)
 		pass
 	
 	'''

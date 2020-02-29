@@ -9,6 +9,14 @@ from SbStateSleeping import SbStateSleeping
 from SbEventHighFive import SbEventHighFive
 from SbStateHighFive import SbStateHighFive
 
+from SbEventDischarge import SbEventDischarge
+from SbStateDischarging import SbStateDischarging
+
+from SbStateTransitioning import SbStateTransitioning
+
+from SbEventCharge import SbEventCharge
+from SbStateCharging import SbStateCharging
+
 class SbStateInitial(FsmState):
 	
 	def __init__(self):
@@ -38,8 +46,15 @@ class SbStateInitial(FsmState):
 	def onEvent(self, fsmOwner, event):
 		if isinstance(event, SbEventSleep):
 			fsmOwner.getFsm().changeState(SbStateSleeping())
+			
 		elif isinstance(event, SbEventHighFive):
 			fsmOwner.getFsm().changeState(SbStateHighFive())
+			
+		elif isinstance(event, SbEventDischarge):
+			fsmOwner.getFsm().changeState(SbStateDischarging())
+			
+		elif isinstance(event, SbEventCharge):
+			fsmOwner.getFsm().changeState(SbStateTransitioning(SbStateCharging()))
 		pass
 	
 	'''

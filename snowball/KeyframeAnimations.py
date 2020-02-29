@@ -30,6 +30,7 @@ class AnimationStrip:
 	mKeyframesList = None
 	mFrameLength = 0
 	mSpriteSheet = None
+	mIsFinished = False
 	
 	'''
 	@param keyframeList: List of keyframes
@@ -43,7 +44,11 @@ class AnimationStrip:
 		self.mIsLooping = loops
 		self.mSpriteSheet = spriteSheet
 		pass
-
+		
+	def start(self):
+		self.mCurrentFame = -1
+		self.mNextFrameUpdateTimeMillis = 0
+		
 	'''
 	Updates the animation by moving stepping the current frame forward
 	if it's time.
@@ -59,6 +64,7 @@ class AnimationStrip:
 					self.mCurrentFame = 0
 				else: 
 					self.mCurrentFame = len(self.mKeyframesList) -1
+					self.mIsFinished = True
 			
 			# Prepare next update
 			self.mNextFrameUpdateTimeMillis = timeMillis + self.mFrameLength
@@ -87,3 +93,10 @@ class AnimationStrip:
 	'''
 	def getId(self):
 		return self.mId
+
+	'''
+	Returns whether the animation is finished playing or not. 
+	Note: Animations with isLooping = True will always return False.
+	'''
+	def isFinished(self):
+		return self.mIsFinished
