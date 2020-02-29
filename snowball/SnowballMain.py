@@ -9,6 +9,7 @@ from SbEventSleep import SbEventSleep
 from SbEventHighFive import SbEventHighFive
 from SbEventDischarge import SbEventDischarge
 from SbEventCharge import SbEventCharge
+from SbEventAwaken import SbEventAwaken
 
 class SnowballMain:
 
@@ -35,7 +36,7 @@ class SnowballMain:
 		mSnowball.init()
 
 		# Test sleeping state.
-		mSnowball.handleEvent(SbEventCharge())
+		mSnowball.handleEvent(SbEventSleep())
 		# TODO: Spin Client Listening thread so we can connect from the mobile app. 
 
 		mRunning = True 
@@ -54,7 +55,10 @@ class SnowballMain:
 						break
 			
 			timeMillis = pygame.time.get_ticks()
-			
+		
+			if timeMillis > 15000: 
+				mSnowball.handleEvent(SbEventAwaken())
+		
 		
 			# Update Snowball
 			mSnowball.update(timeMillis)

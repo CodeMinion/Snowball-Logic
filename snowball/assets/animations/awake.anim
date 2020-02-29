@@ -1,0 +1,14 @@
+{
+	"id": "AWAKE",
+	"frameLength": 600,
+	"isLooping": false,
+	"spriteSheetSrc" : "./assets/spritesheets/sprite_awakenings.png",
+	"keyframes": [
+		{
+			"sourceX": 0,
+			"sourceY": 960,
+			"sourceWidth": 800,
+			"sourceHeight": 480
+		}
+	]
+}
