@@ -19,6 +19,7 @@ class SbStateAwake(FsmState):
 	def onEnter(self, fsmOwner):
 		self.mAnimation = fsmOwner.getAnimation("AWAKE")
 		self.mAnimation.start()
+		fsmOwner.getThrusters().turnOn()
 		pass
 		
 	'''

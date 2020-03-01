@@ -2,8 +2,8 @@
 
 #define STATUS_LED (19)
 /* Snowball Thrusters LED Service Definitions
-   Snowball Thrusters LED Service:  0x38FF
-   Thrusters Pattern Char: 0x3A38
+   Snowball Thrusters LED Service:  0x40FF
+   Thrusters Pattern Char: 0x4A38
 */
 
 // Power Reduction: https://github.com/adafruit/Adafruit_nRF52_Arduino/issues/165
@@ -26,8 +26,8 @@ const char* DEVICE_MANUFACTURER = "Rounin Labs";
 /**
    This service exposes data about the thursters patterns for Snowball.
  **/
-const int UUID16_SVC_SNOWBALL_THURSTERS = 0x38FF;
-const int UUID16_CHR_SNOWBALL_THURSTERS_PATTERN_MEASUREMENT = 0x3A38;
+const int UUID16_SVC_SNOWBALL_THURSTERS = 0x40FF;
+const int UUID16_CHR_SNOWBALL_THURSTERS_PATTERN_MEASUREMENT = 0x4A38;
 
 /**
  * 00 - Thursters Off

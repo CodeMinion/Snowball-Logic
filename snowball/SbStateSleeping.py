@@ -21,7 +21,7 @@ class SbStateSleeping(FsmState):
 	def onEnter(self, fsmOwner):
 		self.mSleepingAnimation = fsmOwner.getAnimation("SLEEPING")
 		self.mSleepingAnimation.start()
-		
+		fsmOwner.getThrusters().turnOff()
 		pass
 		
 	'''

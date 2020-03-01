@@ -13,11 +13,13 @@ class Snowball(FsmOwner):
 	
 	mPygameInstance = None
 	mAnimationDict = {}
+	mThrustersController = None
 	
-	def __init__(self, pygame):
+	def __init__(self, thrusters, pygame):
 		snowballFsm = Fsm(self, SbStateInitial())
 		FsmOwner.__init__(self, snowballFsm)
 		self.mPygameInstance = pygame
+		self.mThrustersController = thrusters
 		
 	def init(self):
 		# Do any resource loading needed for Snowball
@@ -36,6 +38,8 @@ class Snowball(FsmOwner):
 	def getAnimation(self, animId):
 		return self.mAnimationDict[animId]
 
+	def getThrusters(self):
+		return self.mThrustersController
 		
 	def readJsonAnimFile(self, animFilePath):
 		jsonFile = open(animFilePath)

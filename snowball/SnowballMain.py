@@ -4,6 +4,7 @@ import pygame, sys
 from pygame.locals import * 
 
 from Snowball import Snowball
+from ThrustersBleController import ThrustersBleController
 
 from SbEventSleep import SbEventSleep
 from SbEventHighFive import SbEventHighFive
@@ -29,10 +30,11 @@ class SnowballMain:
 		DISPLAYSURF = pygame.display.set_mode((800, 480), pygame.FULLSCREEN)
 
 		# TODO: Connect To Thrusters BT Device 
-		
+		thrusters = ThrustersBleController("E9:DA:27:69:E3:E2")
+		thrusters.connect()
 		
 		# Create Snowball Instance
-		mSnowball = Snowball(pygame)
+		mSnowball = Snowball(thrusters, pygame)
 		mSnowball.init()
 
 		# Test sleeping state.
