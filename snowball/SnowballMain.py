@@ -5,6 +5,7 @@ from pygame.locals import *
 
 from Snowball import Snowball
 from ThrustersBleController import ThrustersBleController
+from ThreadBtServer import ThreadBtServer
 
 from SbEventSleep import SbEventSleep
 from SbEventHighFive import SbEventHighFive
@@ -39,8 +40,11 @@ class SnowballMain:
 
 		# Test sleeping state.
 		mSnowball.handleEvent(SbEventSleep())
-		# TODO: Spin Client Listening thread so we can connect from the mobile app. 
-
+		
+		# Spin Client Listening thread so we can connect from the mobile app. 
+		btServerThread = ThreadBtServer(self)
+		btServerThread.start()
+		
 		mRunning = True 
 		while mRunning:
 			
@@ -74,6 +78,16 @@ class SnowballMain:
 		pygame.quit()
 		sys.exit()
 
+	def shouldRun(self):
+		return self.mRunning
+		
+	'''
+	Prepares events to be handled in the next update cycle. 
+	'''	
+	def queueEvent(self, event):
+		# TODO Queue events for handling during the update loop.
+		pass
+		
 if __name__ == '__main__':
 	snowbalMain = SnowballMain()
 	snowbalMain.run()
