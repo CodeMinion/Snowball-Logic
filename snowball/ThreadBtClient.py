@@ -23,7 +23,7 @@ class ThreadBtClient(threading.Thread):
 		try:
 			while self.mRunning:
 			
-				msgSizeBytes = self.client.recv(4)
+				msgSizeBytes = self.mClient.recv(4)
 				msgSize = struct.unpack('<i', msgSizeBytes)[0]
 				chunks = []
 				bytes_received = 0
@@ -37,7 +37,7 @@ class ThreadBtClient(threading.Thread):
 							
 				data = b''.join(chunks)#self.client.recv(1024)
 				command = '{0}'.format(data)
-				
+				print 'Command Received {0}'.format(command)
 				# TODO Interpret command into event. 
 				event = 'NO-EVENT'
 				self.mSnowballController.queueEvent(command)	

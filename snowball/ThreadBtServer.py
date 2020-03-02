@@ -2,6 +2,7 @@ import threading
 import bluetooth
 import time
 
+from ThreadBtClient import ThreadBtClient
 class ThreadBtServer(threading.Thread):
 
 	#Instance of the main controller so we can forward events it. 
@@ -60,4 +61,4 @@ class ThreadBtServer(threading.Thread):
 		pass
 
 	def stop(self):
-		self.mBtServerSocket
+		self.mBtServerSocket.close()
