@@ -39,7 +39,7 @@ class ThreadBtServer(threading.Thread):
 		# Advertise service
 		bluetooth.advertise_service(self.mBtServerSocket, self.mBtName, self.mBtUuid)
 		#time.sleep(2)
-		while self.shouldRun():
+		while self.mSnowballMain.shouldRun():
 			try:
 
 				print 'Waiting for Clients...'
@@ -52,6 +52,12 @@ class ThreadBtServer(threading.Thread):
 				snowballClient.start()
 				
 			except KeyboardInterrupt as key:
-				bluetooth.stop_advertising(self.btServerSocket)
+				bluetooth.stop_advertising(self.mBtServerSocket)
 				break
+				
+		bluetooth.stop_advertising(self.mBtServerSocket)
+				
 		pass
+
+	def stop(self):
+		self.mBtServerSocket
