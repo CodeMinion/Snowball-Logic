@@ -93,6 +93,7 @@ from SbEventAwaken import SbEventAwaken
 class SnowballMain:
 
 	mRunning = True
+	mNextEvent = None
 	
 	def __init__(self):
 		pass
@@ -118,7 +119,7 @@ class SnowballMain:
 		mSnowball.init()
 
 		# Test sleeping state.
-		mSnowball.handleEvent(SbEventSleep())
+		#mSnowball.handleEvent(SbEventSleep())
 		
 		# Spin Client Listening thread so we can connect from the mobile app. 
 		btServerThread = ThreadBtServer(self)
@@ -141,9 +142,12 @@ class SnowballMain:
 			
 			timeMillis = pygame.time.get_ticks()
 		
-			if timeMillis > 15000: 
-				mSnowball.handleEvent(SbEventAwaken())
+			#if timeMillis > 15000: 
+			#	mSnowball.handleEvent(SbEventAwaken())
 		
+			if self.mNextEvent is not None:
+				mSnowball.handleEvent(self.mNextEvent)
+				self.mNextEvent = None
 		
 			# Update Snowball
 			mSnowball.update(timeMillis)
@@ -167,6 +171,7 @@ class SnowballMain:
 	'''	
 	def queueEvent(self, event):
 		# TODO Queue events for handling during the update loop.
+		self.mNextEvent = event
 		pass
 		
 if __name__ == '__main__':

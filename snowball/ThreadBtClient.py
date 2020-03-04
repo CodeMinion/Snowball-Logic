@@ -2,6 +2,12 @@ import bluetooth
 import threading
 import struct
 
+from SbEventSleep import SbEventSleep
+from SbEventHighFive import SbEventHighFive
+from SbEventDischarge import SbEventDischarge
+from SbEventCharge import SbEventCharge
+from SbEventAwaken import SbEventAwaken
+
 class ThreadBtClient(threading.Thread):
 
 	# Reference to the Snowball Controller
@@ -39,8 +45,10 @@ class ThreadBtClient(threading.Thread):
 				command = '{0}'.format(data)
 				print 'Command Received {0}'.format(command)
 				# TODO Interpret command into event. 
-				event = 'NO-EVENT'
-				self.mSnowballController.queueEvent(command)	
+				event = self.translateEvent(command)
+				print 'Event Translated {0}'.format(event)
+				if event is not None:
+					self.mSnowballController.queueEvent(event)	
 				
 		except IOError as e:
 			print '{0}'.format(e)
@@ -71,3 +79,26 @@ class ThreadBtClient(threading.Thread):
 		
 		except IOError as e:
 			pass
+
+	def translateEvent(self, eventStr):
+		event = None
+		
+		if eventStr == 'SLEEP':
+			event = SbEventSleep()
+		elif eventStr == 'WAKE_UP':
+			event = SbEventAwaken()
+		elif eventStr == 'DISCHARGE':
+			event = SbEventDischarge()
+		elif eventStr == 'RECHARGE':
+			event = SbEventCharge()
+		elif eventStr == 'HIGH_FIVE':
+			event = SbEventHighFive()
+		elif eventStr == 'HAPPY':
+			event = None
+		elif eventStr == 'SAD':
+			event = None
+		elif eventStr == 'RESET':
+			event = None
+								
+		return event
+		pass
