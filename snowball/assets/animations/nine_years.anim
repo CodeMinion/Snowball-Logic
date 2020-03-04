@@ -1,0 +1,43 @@
+{
+	"id": "NINE-YEARS",
+	"frameLength": 400,
+	"isLooping": true,
+	"spriteSheetSrc" : "./assets/spritesheets/sprite_nine_years.png",
+	"keyframes": [{
+			"sourceX": 0,
+			"sourceY": 0,
+			"sourceWidth": 0,
+			"sourceHeight": 0
+		},
+		{
+			"sourceX": 40,
+			"sourceY": 60,
+			"sourceWidth": 251,
+			"sourceHeight": 360
+		},
+		{
+			"sourceX": 40,
+			"sourceY": 60,
+			"sourceWidth": 419,
+			"sourceHeight": 360
+		},
+		{
+			"sourceX": 40,
+			"sourceY": 60,
+			"sourceWidth": 556,
+			"sourceHeight": 360
+		},
+		{
+			"sourceX": 40,
+			"sourceY": 60,
+			"sourceWidth": 688,
+			"sourceHeight": 360
+		},
+		{
+			"sourceX": 40,
+			"sourceY": 60,
+			"sourceWidth": 800,
+			"sourceHeight": 360
+		}
+	]
+}

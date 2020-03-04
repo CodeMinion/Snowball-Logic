@@ -1,24 +1,14 @@
 from FsmState import FsmState
 from FsmOwner import FsmOwner
 
+import SbStateAwake
 from SbStateTransitioning import SbStateTransitioning
+from SbEventReset import SbEventReset
 
 from KeyframeAnimations import *
 from pygame.locals import * 
 
-from SbEventDischarge import SbEventDischarge
-from SbStateDischarging import SbStateDischarging
-
-from SbEventHighFive import SbEventHighFive
-import SbStateHighFive
-
-from SbEventSad import SbEventSad
-import SbStateSad
-
-from SbEventNineYears import SbEventNineYears
-import SbStateNineYears
-
-class SbStateAwake(FsmState):
+class SbStateNineYears(FsmState):
 	
 	mAnimation = None
 	def __init__(self):
@@ -28,9 +18,8 @@ class SbStateAwake(FsmState):
 	Perform any init steps required for this state.
 	'''	
 	def onEnter(self, fsmOwner):
-		self.mAnimation = fsmOwner.getAnimation("AWAKE")
+		self.mAnimation = fsmOwner.getAnimation("NINE-YEARS")
 		self.mAnimation.start()
-		fsmOwner.getThrusters().turnOn()
 		pass
 		
 	'''
@@ -56,17 +45,9 @@ class SbStateAwake(FsmState):
 	Handle any events here.
 	'''	
 	def onEvent(self, fsmOwner, event):
-		if isinstance(event, SbEventDischarge):
-			fsmOwner.getFsm().changeState(SbStateTransitioning(SbStateDischarging()))	
-		
-		elif isinstance(event, SbEventHighFive):
-			fsmOwner.getFsm().changeState(SbStateTransitioning(SbStateHighFive.SbStateHighFive()))	
-		
-		elif isinstance(event, SbEventSad):
-			fsmOwner.getFsm().changeState(SbStateTransitioning(SbStateSad.SbStateSad()))	
-		
-		elif isinstance(event, SbEventNineYears):
-			fsmOwner.getFsm().changeState(SbStateTransitioning(SbStateNineYears.SbStateNineYears()))	
+		# Go to the back to idle State.
+		if isinstance(event, SbEventReset):
+			fsmOwner.getFsm().changeState(SbStateTransitioning(SbStateAwake.SbStateAwake()))
 		
 		pass
 	

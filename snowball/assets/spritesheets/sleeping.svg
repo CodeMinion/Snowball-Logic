@@ -15,7 +15,10 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="sleeping.svg">
+   sodipodi:docname="sleeping.svg"
+   inkscape:export-filename="C:\Users\CodeMinion\Documents\3DPrinting\Costumes\Overwatch\Mei\Snowball\Code\snowball\assets\spritesheets\sleeping.png"
+   inkscape:export-xdpi="95.625"
+   inkscape:export-ydpi="95.625">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -26,8 +29,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="530.28504"
-     inkscape:cy="156.50004"
+     inkscape:cx="298.14218"
+     inkscape:cy="213.6429"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -45,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -55,7 +58,7 @@
      id="layer1"
      transform="translate(0,-169.99998)">
     <path
-       style="fill:#b8f7d7;fill-opacity:1;fill-rule:evenodd;stroke:#b8f7d7;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#88d7f6;fill-opacity:1;fill-rule:evenodd;stroke:#88d7f6;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 180.52146,275.07736 -39.30953,0.37798 31.75,-75.59524 h -29.86012 l -0.37797,-7.9375 42.7303,0.53454 -31.59344,75.43867 h 26.77146 z"
        id="path815"
        inkscape:connector-curvature="0"
@@ -65,9 +68,9 @@
        inkscape:connector-curvature="0"
        id="path821"
        d="m 122.31309,275.07736 -39.309518,0.37798 31.749988,-54.42857 H 84.893449 l -0.37797,-7.9375 42.730291,0.53454 -31.593437,54.272 h 26.771457 z"
-       style="fill:#b8f7d7;fill-opacity:1;fill-rule:evenodd;stroke:#b8f7d7;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+       style="fill:#88d7f6;fill-opacity:1;fill-rule:evenodd;stroke:#88d7f6;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     <path
-       style="fill:#b8f7d7;fill-opacity:1;fill-rule:evenodd;stroke:#b8f7d7;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#88d7f6;fill-opacity:1;fill-rule:evenodd;stroke:#88d7f6;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 64.104741,275.07736 -39.309506,0.37798 31.749982,-42.7869 H 26.685112 l -0.37797,-7.9375 42.730276,0.53454 -31.593422,42.63033 h 26.771445 z"
        id="path823"
        inkscape:connector-curvature="0"

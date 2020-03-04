@@ -8,6 +8,8 @@ from SbEventDischarge import SbEventDischarge
 from SbEventCharge import SbEventCharge
 from SbEventAwaken import SbEventAwaken
 from SbEventReset import SbEventReset
+from SbEventSad import SbEventSad
+from SbEventNineYears import SbEventNineYears
 
 class ThreadBtClient(threading.Thread):
 
@@ -97,7 +99,9 @@ class ThreadBtClient(threading.Thread):
 		elif eventStr == 'HAPPY':
 			event = None
 		elif eventStr == 'SAD':
-			event = None
+			event = SbEventSad()
+		elif eventStr == 'HOW_LONG':
+			event = SbEventNineYears()
 		elif eventStr == 'RESET':
 			event = SbEventReset()
 								
