@@ -6,6 +6,9 @@ from SbStateTransitioning import SbStateTransitioning
 from KeyframeAnimations import *
 from pygame.locals import * 
 
+from SbEventDischarge import SbEventDischarge
+from SbStateDischarging import SbStateDischarging
+
 
 class SbStateAwake(FsmState):
 	
@@ -45,6 +48,11 @@ class SbStateAwake(FsmState):
 	Handle any events here.
 	'''	
 	def onEvent(self, fsmOwner, event):
+		if isinstance(event, SbEventDischarge):
+			fsmOwner.getFsm().changeState(SbStateTransitioning(SbStateDischarging()))	
+		elif isinstance(event, SbEventHighFive):
+			fsmOwner.getFsm().changeState(SbStateTransitioning(SbStateHighFive()))	
+		
 		pass
 	
 	'''
