@@ -9,6 +9,8 @@ from pygame.locals import *
 from SbEventDischarge import SbEventDischarge
 from SbStateDischarging import SbStateDischarging
 
+from SbEventHighFive import SbEventHighFive
+import SbStateHighFive
 
 class SbStateAwake(FsmState):
 	
@@ -51,7 +53,7 @@ class SbStateAwake(FsmState):
 		if isinstance(event, SbEventDischarge):
 			fsmOwner.getFsm().changeState(SbStateTransitioning(SbStateDischarging()))	
 		elif isinstance(event, SbEventHighFive):
-			fsmOwner.getFsm().changeState(SbStateTransitioning(SbStateHighFive()))	
+			fsmOwner.getFsm().changeState(SbStateTransitioning(SbStateHighFive.SbStateHighFive()))	
 		
 		pass
 	

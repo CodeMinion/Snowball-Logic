@@ -109,7 +109,7 @@ class SnowballMain:
 		pygame.mouse.set_visible(False) 
 
 		DISPLAYSURF = pygame.display.set_mode((800, 480), pygame.FULLSCREEN)
-
+		
 		# TODO: Connect To Thrusters BT Device 
 		thrusters = ThrustersBleController("E9:DA:27:69:E3:E2")
 		thrusters.connect()
@@ -142,21 +142,26 @@ class SnowballMain:
 			
 			timeMillis = pygame.time.get_ticks()
 		
-			#if timeMillis > 15000: 
-			#	mSnowball.handleEvent(SbEventAwaken())
-		
-			if self.mNextEvent is not None:
-				mSnowball.handleEvent(self.mNextEvent)
-				self.mNextEvent = None
-		
-			# Update Snowball
-			mSnowball.update(timeMillis)
 			
-			# Draw Snowball
-			mSnowball.draw(DISPLAYSURF)
-					
-			pygame.display.update()
-			mFpsClock.tick(FPS)
+			try:
+				if self.mNextEvent is not None:
+					mSnowball.handleEvent(self.mNextEvent)
+					self.mNextEvent = None
+			
+				# Update Snowball
+				mSnowball.update(timeMillis)
+				
+				# Draw Snowball
+				mSnowball.draw(DISPLAYSURF)
+				
+				pygame.display.update()
+				mFpsClock.tick(FPS)
+			
+			except:
+				self.mRunning = False
+				break
+				
+			
 		
 		thrusters.disconnect()
 		btServerThread.stop()	

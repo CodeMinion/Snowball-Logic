@@ -7,6 +7,7 @@ from SbEventHighFive import SbEventHighFive
 from SbEventDischarge import SbEventDischarge
 from SbEventCharge import SbEventCharge
 from SbEventAwaken import SbEventAwaken
+from SbEventReset import SbEventReset
 
 class ThreadBtClient(threading.Thread):
 
@@ -43,10 +44,10 @@ class ThreadBtClient(threading.Thread):
 							
 				data = b''.join(chunks)#self.client.recv(1024)
 				command = '{0}'.format(data)
-				print 'Command Received {0}'.format(command)
+				#print 'Command Received {0}'.format(command)
 				# TODO Interpret command into event. 
 				event = self.translateEvent(command)
-				print 'Event Translated {0}'.format(event)
+				#print 'Event Translated {0}'.format(event)
 				if event is not None:
 					self.mSnowballController.queueEvent(event)	
 				
@@ -98,7 +99,7 @@ class ThreadBtClient(threading.Thread):
 		elif eventStr == 'SAD':
 			event = None
 		elif eventStr == 'RESET':
-			event = None
+			event = SbEventReset()
 								
 		return event
 		pass

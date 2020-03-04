@@ -4,6 +4,9 @@ from FsmOwner import FsmOwner
 from KeyframeAnimations import *
 from pygame.locals import * 
 
+import SbStateAwakening
+from SbStateTransitioning import SbStateTransitioning
+
 class SbStateCharging(FsmState):
 	
 	mAnimation = None
@@ -25,7 +28,6 @@ class SbStateCharging(FsmState):
 	def onUpdate(self, fsmOwner, timeMilis):
 		self.mAnimation.update(timeMilis)
 		
-		# TODO If charge animation is complete got to waking.
 		pass
 		
 	'''
@@ -37,6 +39,11 @@ class SbStateCharging(FsmState):
 		sourceRect = Rect((keyframeSource[0], keyframeSource[1]), (keyframeSource[2],keyframeSource[3]))
 		dest = (0,0)
 		drawSurface.blit(self.mAnimation.getSpriteSheet(), dest, sourceRect)
+		
+		if self.mAnimation.isFinished():
+			fsmOwner.getFsm().changeState(SbStateTransitioning(SbStateAwakening.SbStateAwakening()))
+			pass
+		
 		pass
 	
 	'''

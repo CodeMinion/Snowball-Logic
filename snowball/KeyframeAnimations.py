@@ -48,7 +48,7 @@ class AnimationStrip:
 	def start(self):
 		self.mCurrentFame = -1
 		self.mNextFrameUpdateTimeMillis = 0
-		
+		self.mIsFinished = False
 	'''
 	Updates the animation by moving stepping the current frame forward
 	if it's time.

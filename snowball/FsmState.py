@@ -1,5 +1,3 @@
-from SbStateInitial import SbStateInitial
-
 class FsmState:
 	
 	def __init__(self):
@@ -27,8 +25,6 @@ class FsmState:
 	Handle any events here.
 	'''	
 	def onEvent(self, fsmOwner, event):
-		if isinstance(event, SbEventReset):
-			fsmOwner.getFsm().changeState(SbStateTransitioning(SbStateInitial()))
 		
 		pass
 	

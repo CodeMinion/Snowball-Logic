@@ -4,6 +4,11 @@ from FsmOwner import FsmOwner
 from KeyframeAnimations import *
 from pygame.locals import * 
 
+from SbEventReset import SbEventReset
+import SbStateAwake
+
+from SbStateTransitioning import SbStateTransitioning
+
 class SbStateHighFive(FsmState):
 	
 	mAnimation = None
@@ -40,6 +45,9 @@ class SbStateHighFive(FsmState):
 	Handle any events here.
 	'''	
 	def onEvent(self, fsmOwner, event):
+		if isinstance(event, SbEventReset):
+			fsmOwner.getFsm().changeState(SbStateTransitioning(SbStateAwake.SbStateAwake()))	
+		
 		pass
 	
 	'''

@@ -19,6 +19,8 @@ class SbStateDischarging(FsmState):
 	def onEnter(self, fsmOwner):
 		self.mAnimation = fsmOwner.getAnimation("DISCHARGING")
 		self.mAnimation.start()
+		fsmOwner.getThrusters().turnOff()
+
 		pass
 		
 	'''

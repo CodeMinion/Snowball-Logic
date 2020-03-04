@@ -51,7 +51,7 @@ class ThrustersBleController(DefaultDelegate):
 	'''	
 	def turnOn(self):
 		onData = struct.pack('<b', 0x01)
-		print 'Turning Thrusters On'
+		#print 'Turning Thrusters On'
 		self.mThrustersCharacteristic.write(onData)
 		pass
 	
@@ -60,7 +60,7 @@ class ThrustersBleController(DefaultDelegate):
 	'''	
 	def turnOff(self):
 		offData = struct.pack('<b', 0x00)
-		print 'Turning Thrusters Off'
+		#print 'Turning Thrusters Off'
 		self.mThrustersCharacteristic.write(offData)
 		pass
 	
