@@ -3,19 +3,29 @@ from FsmOwner import FsmOwner
 
 from FsmEvent import FsmEvent
 
-from SbEventSleep import SbEventSleep
-from SbStateSleeping import SbStateSleeping
-
-from SbEventHighFive import SbEventHighFive
-from SbStateHighFive import SbStateHighFive
-
-from SbEventDischarge import SbEventDischarge
-from SbStateDischarging import SbStateDischarging
-
 from SbStateTransitioning import SbStateTransitioning
 
 from SbEventCharge import SbEventCharge
 from SbStateCharging import SbStateCharging
+
+from SbEventDischarge import SbEventDischarge
+from SbStateDischarging import SbStateDischarging
+
+from SbEventHighFive import SbEventHighFive
+import SbStateHighFive
+
+from SbEventSad import SbEventSad
+import SbStateSad
+
+from SbEventHappy import SbEventHappy 
+import SbStateHappy
+
+from SbEventNineYears import SbEventNineYears
+import SbStateNineYears
+
+from SbEventSleep import SbEventSleep
+import SbStateSleeping
+
 
 class SbStateInitial(FsmState):
 	
@@ -45,16 +55,23 @@ class SbStateInitial(FsmState):
 	'''	
 	def onEvent(self, fsmOwner, event):
 		if isinstance(event, SbEventSleep):
-			fsmOwner.getFsm().changeState(SbStateSleeping())
+			fsmOwner.getFsm().changeState(SbStateSleeping.SbStateSleeping())
 			
 		elif isinstance(event, SbEventHighFive):
-			fsmOwner.getFsm().changeState(SbStateHighFive())
+			fsmOwner.getFsm().changeState(SbStateHighFive.SbStateHighFive())
 			
 		elif isinstance(event, SbEventDischarge):
 			fsmOwner.getFsm().changeState(SbStateDischarging())
 			
 		elif isinstance(event, SbEventCharge):
 			fsmOwner.getFsm().changeState(SbStateTransitioning(SbStateCharging()))
+			
+		elif isinstance(event, SbEventSad):
+			fsmOwner.getFsm().changeState(SbStateTransitioning(SbStateSad.SbStateSad()))
+			
+		elif isinstance(event, SbEventHappy):
+			fsmOwner.getFsm().changeState(SbStateTransitioning(SbStateHappy.SbStateHappy()))
+			
 		pass
 	
 	'''

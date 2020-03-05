@@ -110,9 +110,16 @@ class SnowballMain:
 
 		DISPLAYSURF = pygame.display.set_mode((800, 480), pygame.FULLSCREEN)
 		
-		# TODO: Connect To Thrusters BT Device 
-		thrusters = ThrustersBleController("E9:DA:27:69:E3:E2")
-		thrusters.connect()
+		try:
+			# TODO: Connect To Thrusters BT Device 
+			thrusters = ThrustersBleController("E9:DA:27:69:E3:E2")
+			thrusters.connect()
+		except:
+			print("Error connecting thrusters:", sys.exc_info()[0])
+			pygame.quit()
+			sys.exit()
+			return
+		
 		
 		# Create Snowball Instance
 		mSnowball = Snowball(thrusters, pygame)
@@ -157,7 +164,11 @@ class SnowballMain:
 				pygame.display.update()
 				mFpsClock.tick(FPS)
 			
+			except TypeError as e :
+				print "Error: {0}".format(e)
+				break
 			except:
+				print("Unexpected error:", sys.exc_info()[0])
 				self.mRunning = False
 				break
 				

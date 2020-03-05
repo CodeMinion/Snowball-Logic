@@ -5,8 +5,8 @@ from KeyframeAnimations import *
 from pygame.locals import * 
 
 from SbEventCharge import SbEventCharge
-from SbStateCharging import SbStateCharging
-from SbStateTransitioning import SbStateTransitioning
+import SbStateCharging
+import SbStateTransitioning
 
 class SbStateDischarged(FsmState):
 	
@@ -38,7 +38,7 @@ class SbStateDischarged(FsmState):
 	
 		if isinstance(event, SbEventCharge):
 			# Move to charging state.
-			fsmOwner.getFsm().changeState(SbStateTransitioning(SbStateCharging()))
+			fsmOwner.getFsm().changeState(SbStateTransitioning.SbStateTransitioning(SbStateCharging.SbStateCharging()))
 		pass
 	
 	'''

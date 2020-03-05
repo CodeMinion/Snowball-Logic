@@ -15,8 +15,14 @@ import SbStateHighFive
 from SbEventSad import SbEventSad
 import SbStateSad
 
+from SbEventHappy import SbEventHappy 
+import SbStateHappy
+
 from SbEventNineYears import SbEventNineYears
 import SbStateNineYears
+
+from SbEventSleep import SbEventSleep
+import SbStateSleeping
 
 class SbStateAwake(FsmState):
 	
@@ -65,9 +71,14 @@ class SbStateAwake(FsmState):
 		elif isinstance(event, SbEventSad):
 			fsmOwner.getFsm().changeState(SbStateSad.SbStateSad())	
 		
+		elif isinstance(event, SbEventHappy):
+			fsmOwner.getFsm().changeState(SbStateHappy.SbStateHappy())	
+		
 		elif isinstance(event, SbEventNineYears):
 			fsmOwner.getFsm().changeState(SbStateTransitioning(SbStateNineYears.SbStateNineYears()))	
 		
+		elif isinstance(event, SbEventSleep):
+			fsmOwner.getFsm().changeState(SbStateSleeping.SbStateSleeping())
 		pass
 	
 	'''

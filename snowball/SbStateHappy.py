@@ -1,14 +1,14 @@
 from FsmState import FsmState
 from FsmOwner import FsmOwner
 
-import SbStateTransitioning
 import SbStateAwake
+from SbStateTransitioning import SbStateTransitioning
+from SbEventReset import SbEventReset
 
 from KeyframeAnimations import *
 from pygame.locals import * 
 
-
-class SbStateAwakening(FsmState):
+class SbStateHappy(FsmState):
 	
 	mAnimation = None
 	def __init__(self):
@@ -18,7 +18,7 @@ class SbStateAwakening(FsmState):
 	Perform any init steps required for this state.
 	'''	
 	def onEnter(self, fsmOwner):
-		self.mAnimation = fsmOwner.getAnimation("AWAKENING")
+		self.mAnimation = fsmOwner.getAnimation("HAPPY")
 		self.mAnimation.start()
 		pass
 		
@@ -39,17 +39,15 @@ class SbStateAwakening(FsmState):
 		dest = (0,0)
 		drawSurface.blit(self.mAnimation.getSpriteSheet(), dest, sourceRect)
 		
-		# Go to the discharged State.
-		if self.mAnimation.isFinished():
-			fsmOwner.getFsm().changeState(SbStateAwake.SbStateAwake())
-			pass
-		
 		pass
 	
 	'''
 	Handle any events here.
 	'''	
 	def onEvent(self, fsmOwner, event):
+		# Go to the back to idle State.
+		if isinstance(event, SbEventReset):
+			fsmOwner.getFsm().changeState(SbStateTransitioning(SbStateAwake.SbStateAwake()))
 		pass
 	
 	'''

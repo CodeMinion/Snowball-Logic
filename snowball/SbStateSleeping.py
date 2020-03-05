@@ -4,8 +4,8 @@ from FsmOwner import FsmOwner
 from KeyframeAnimations import *
 from pygame.locals import * 
 
-from SbStateTransitioning import SbStateTransitioning
-from SbStateAwakening import SbStateAwakening
+import SbStateTransitioning
+import SbStateAwakening
 
 from SbEventAwaken import SbEventAwaken
 
@@ -49,7 +49,7 @@ class SbStateSleeping(FsmState):
 	'''	
 	def onEvent(self, fsmOwner, event):
 		if isinstance(event, SbEventAwaken):
-			fsmOwner.getFsm().changeState(SbStateTransitioning(SbStateAwakening()))
+			fsmOwner.getFsm().changeState(SbStateTransitioning.SbStateTransitioning(SbStateAwakening.SbStateAwakening()))
 		pass
 	
 	'''

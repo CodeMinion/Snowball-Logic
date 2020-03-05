@@ -1,0 +1,43 @@
+{
+	"id": "HAPPY",
+	"frameLength": 200,
+	"isLooping": false,
+	"spriteSheetSrc" : "./assets/spritesheets/sprite_happy.png",
+	"keyframes": [{
+			"sourceX": 0,
+			"sourceY": 0,
+			"sourceWidth": 800,
+			"sourceHeight": 480
+		},
+		{
+			"sourceX": 800,
+			"sourceY": 0,
+			"sourceWidth": 800,
+			"sourceHeight": 480
+		},
+		{
+			"sourceX": 0,
+			"sourceY": 480,
+			"sourceWidth": 800,
+			"sourceHeight": 480
+		},
+		{
+			"sourceX": 800,
+			"sourceY": 480,
+			"sourceWidth": 800,
+			"sourceHeight": 480
+		},
+		{
+			"sourceX": 0,
+			"sourceY": 960,
+			"sourceWidth": 800,
+			"sourceHeight": 480
+		},
+		{
+			"sourceX": 800,
+			"sourceY": 960,
+			"sourceWidth": 800,
+			"sourceHeight": 480
+		}
+	]
+}
