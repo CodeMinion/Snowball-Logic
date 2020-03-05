@@ -6,7 +6,7 @@ from SbStateTransitioning import SbStateTransitioning
 from SbEventReset import SbEventReset
 
 from SbEventDischarge import SbEventDischarge
-import SbStateDischraging 
+import SbStateDischarging 
 
 from KeyframeAnimations import *
 from pygame.locals import * 
@@ -53,7 +53,7 @@ class SbStateSad(FsmState):
 			fsmOwner.getFsm().changeState(SbStateTransitioning(SbStateAwake.SbStateAwake()))
 		# Go to the discharging State.	
 		elif isinstance(event, SbEventDischarge):
-			fsmOwner.getFsm().changeState(SbStateTransitioning(SbStateDischraging.SbStateDischraging()))
+			fsmOwner.getFsm().changeState(SbStateTransitioning(SbStateDischarging.SbStateDischarging()))
 		
 		pass
 	

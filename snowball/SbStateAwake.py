@@ -63,7 +63,7 @@ class SbStateAwake(FsmState):
 			fsmOwner.getFsm().changeState(SbStateTransitioning(SbStateHighFive.SbStateHighFive()))	
 		
 		elif isinstance(event, SbEventSad):
-			fsmOwner.getFsm().changeState(SbStateTransitioning(SbStateSad.SbStateSad()))	
+			fsmOwner.getFsm().changeState(SbStateSad.SbStateSad())	
 		
 		elif isinstance(event, SbEventNineYears):
 			fsmOwner.getFsm().changeState(SbStateTransitioning(SbStateNineYears.SbStateNineYears()))	

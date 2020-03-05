@@ -1,6 +1,6 @@
 {
 	"id": "SAD",
-	"frameLength": 400,
+	"frameLength": 250,
 	"isLooping": false,
 	"spriteSheetSrc" : "./assets/spritesheets/sprite_sad.png",
 	"keyframes": [{
