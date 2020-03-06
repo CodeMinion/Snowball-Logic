@@ -125,12 +125,13 @@ class SnowballMain:
 		mSnowball = Snowball(thrusters, pygame)
 		mSnowball.init()
 
-		# Test sleeping state.
-		#mSnowball.handleEvent(SbEventSleep())
 		
 		# Spin Client Listening thread so we can connect from the mobile app. 
 		btServerThread = ThreadBtServer(self)
 		btServerThread.start()
+		
+		# Test sleeping state.
+		mSnowball.handleEvent(SbEventSleep())
 		
 		self.mRunning = True 
 		while self.mRunning:
