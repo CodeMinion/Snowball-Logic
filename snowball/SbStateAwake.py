@@ -7,7 +7,7 @@ from KeyframeAnimations import *
 from pygame.locals import * 
 
 from SbEventDischarge import SbEventDischarge
-from SbStateDischarging import SbStateDischarging
+import SbStatePreDischarge
 
 from SbEventHighFive import SbEventHighFive
 import SbStateHighFive
@@ -22,7 +22,7 @@ from SbEventNineYears import SbEventNineYears
 import SbStateNineYears
 
 from SbEventSleep import SbEventSleep
-import SbStateSleeping
+import SbStateFallingAsleep
 
 class SbStateAwake(FsmState):
 	
@@ -63,7 +63,7 @@ class SbStateAwake(FsmState):
 	'''	
 	def onEvent(self, fsmOwner, event):
 		if isinstance(event, SbEventDischarge):
-			fsmOwner.getFsm().changeState(SbStateTransitioning(SbStateDischarging()))	
+			fsmOwner.getFsm().changeState(SbStatePreDischarge.SbStatePreDischarge())	
 		
 		elif isinstance(event, SbEventHighFive):
 			fsmOwner.getFsm().changeState(SbStateTransitioning(SbStateHighFive.SbStateHighFive()))	
@@ -78,7 +78,7 @@ class SbStateAwake(FsmState):
 			fsmOwner.getFsm().changeState(SbStateTransitioning(SbStateNineYears.SbStateNineYears()))	
 		
 		elif isinstance(event, SbEventSleep):
-			fsmOwner.getFsm().changeState(SbStateSleeping.SbStateSleeping())
+			fsmOwner.getFsm().changeState(SbStateFallingAsleep.SbStateFallingAsleep())
 		pass
 	
 	'''

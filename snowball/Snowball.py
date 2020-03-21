@@ -62,6 +62,7 @@ class Snowball(FsmOwner):
 			# Store in keyframe list. 
 			animKeyframeListOut.append(animKeyframeOut)
 		
+		print 'Loading Animation {0}...'.format(animId)
 		spriteSheet = self.mPygameInstance.image.load(spriteSheetSrc)
 		outAnimation = AnimationStrip(animId, spriteSheet, animKeyframeListOut, frameLength, isLooping)
 		

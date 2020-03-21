@@ -1,0 +1,37 @@
+{
+	"id": "FALLING-ASLEEP",
+	"frameLength": 400,
+	"isLooping": false,
+	"spriteSheetSrc" : "./assets/spritesheets/sprite_falling_asleep.png",
+	"keyframes": [{
+			"sourceX": 0,
+			"sourceY": 0,
+			"sourceWidth": 800,
+			"sourceHeight": 480
+		},
+		{
+			"sourceX": 800,
+			"sourceY": 0,
+			"sourceWidth": 800,
+			"sourceHeight": 480
+		},
+		{
+			"sourceX": 0,
+			"sourceY": 480,
+			"sourceWidth": 800,
+			"sourceHeight": 480
+		},
+		{
+			"sourceX": 800,
+			"sourceY": 480,
+			"sourceWidth": 800,
+			"sourceHeight": 480
+		},
+		{
+			"sourceX": 0,
+			"sourceY": 960,
+			"sourceWidth": 800,
+			"sourceHeight": 480
+		}
+	]
+}
