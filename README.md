@@ -11,7 +11,7 @@ sudo apt-get update
 sudo apt-get install python-pip libglib2.0-dev
 sudo pip install bluepy
 sudo apt-get install bluetooth
-sudo apt-get install python-blue
+sudo apt-get install python-bluez
 ```
 
 ### Copy logic code:
